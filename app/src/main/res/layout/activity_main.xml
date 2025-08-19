@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    android:background="#121212"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/Title_Spotify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Music Alarm (Spotify)"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Botón de autorización -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/authButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Autorizar con Spotify"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"
+        app:cornerRadius="50dp"
+        app:backgroundTint="#1DB954"
+        app:icon="@android:drawable/ic_media_play"
+        app:iconTint="@android:color/white"
+        android:textColor="@android:color/white" />
+
+    <!-- Estado del token -->
+    <TextView
+        android:id="@+id/tokenStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:text="Verificando estado del token..."
+        android:textColor="#B3B3B3"
+        android:textSize="16sp" />
+
+    <!-- Botón configurar alarma -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/setAlarmButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Configurar alarma"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"
+        app:cornerRadius="50dp"
+        app:backgroundTint="#1DB954"
+        android:textColor="@android:color/white" />
+
+    <!-- Estado de la alarma -->
+    <TextView
+        android:id="@+id/alarmStatusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No hay alarmas configuradas."
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="32dp"
+        android:layout_gravity="center" />
+
+    <!-- Botón check devices -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/checkDevicesButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Verificar dispositivos"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"
+        app:cornerRadius="50dp"
+        app:backgroundTint="#1DB954"
+        android:textColor="@android:color/white" />
+
+    <!-- Estado de los dispositivos -->
+    <TextView
+        android:id="@+id/devicesStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:text="Verificando dispositivos conectados..."
+        android:textColor="#B3B3B3"
+        android:textSize="16sp" />
+
+</LinearLayout>

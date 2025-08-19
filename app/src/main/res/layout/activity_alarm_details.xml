@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    android:background="#121212"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Selector de hora -->
+    <TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:timePickerMode="spinner"
+        android:theme="@style/ThemeOverlay.MaterialComponents.TimePicker"
+        android:layout_marginBottom="24dp"
+        android:layout_gravity="center" />
+
+    <!-- Input de playlist -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ID de la playlist"
+        app:boxStrokeColor="#1DB954"
+        app:hintTextColor="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/playlistIdInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Botón guardar configuración -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saveSettingsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar configuración"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:layout_marginTop="24dp"
+        app:cornerRadius="50dp"
+        app:backgroundTint="#1DB954"
+        android:textColor="@android:color/white" />
+
+    <!-- Botón comprobar alarma -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/viewAlarmsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Comprobar alarma"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:layout_marginTop="12dp"
+        app:cornerRadius="50dp"
+        app:backgroundTint="#1DB954"
+        android:textColor="@android:color/white" />
+
+    <!-- Botón borrar alarma -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/clearAlarmsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Borrar alarma"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:layout_marginTop="12dp"
+        app:cornerRadius="50dp"
+        app:backgroundTint="#D32F2F"
+        android:textColor="@android:color/white" />
+
+    <!-- Botón atrás -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/backButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Atrás"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:layout_marginTop="12dp"
+        app:cornerRadius="50dp"
+        app:backgroundTint="#333333"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

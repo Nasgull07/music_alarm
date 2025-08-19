@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    android:background="#121212"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/alarmsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alarmas Configuradas"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:paddingBottom="16dp"
+        android:textAlignment="center"
+        android:layout_gravity="center" />
+
+    <!-- Botón volver -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/backToMainButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volver a Inicio"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:layout_gravity="center"
+        app:cornerRadius="50dp"
+        app:backgroundTint="#1DB954"
+        android:textColor="@android:color/white" />
+
+    <!-- Botón crear nueva alarma -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/createAlarmButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crear Nueva Alarma"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:layout_marginTop="12dp"
+        android:layout_gravity="center"
+        app:cornerRadius="50dp"
+        app:backgroundTint="#1DB954"
+        android:textColor="@android:color/white" />
+
+    <!-- Lista de alarmas -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/alarmsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp" />
+
+</LinearLayout>
