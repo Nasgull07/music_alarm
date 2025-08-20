@@ -65,9 +65,10 @@ package com.example.alarmamusical;
 
                         // Guardar configuración en SharedPreferences
                         SharedPreferences.Editor editor = prefs.edit();
-                        String alarmValue = selectedHour + ":" + selectedMinute + "," + selectedPlaylistId;
-                        editor.putString(localAlarmKey, alarmValue);
-                        editor.putBoolean("alarmActive_" + localAlarmKey, true);
+                        String alarmValue = selectedHour + ":" + selectedMinute;
+                        editor.putString(localAlarmKey, alarmValue); // Guardar hora de la alarma
+                        editor.putString("playlistId_" + localAlarmKey, selectedPlaylistId); // Guardar ID de la playlist
+                        editor.putBoolean("alarmActive_" + localAlarmKey, true); // Marcar la alarma como activa
                         editor.apply();
 
                         // Verificar si la alarma está activa

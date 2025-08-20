@@ -14,6 +14,12 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders.putAll(
+            mapOf(
+                "redirectSchemeName" to "com.example.alarmamusical",
+                "redirectHostName" to "callback"
+            )
+        )
     }
 
     buildTypes {
@@ -29,13 +35,17 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
+
 }
 
 dependencies {
 
     implementation("com.squareup.okhttp3:okhttp:4.11.0")
     implementation ("androidx.work:work-runtime:2.8.1")
-    implementation ("com.google.android.material:material:1.9.0")
+    implementation(files("libs/spotify-app-remote-release-0.8.0.aar"))
+    implementation(files("libs/spotify-auth-release-2.1.0.aar"))
+    implementation("com.google.code.gson:gson:2.10.1")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)

@@ -23,11 +23,29 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SpotifyAuthActivity" />
+        <activity
+            android:name=".SpotifyAuthActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="${redirectSchemeName}"
+                    android:host="${redirectHostName}" />
+            </intent-filter>
+        </activity>
         <activity android:name=".SettingsActivity" />
-        <receiver android:name=".AlarmReceiver" />
+        <receiver
+            android:name=".AlarmReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.example.alarmamusical.STOP_ALARM" />
+            </intent-filter>
+        </receiver>
         <activity android:name=".AlarmDetailsActivity" />
         <activity android:name=".CreateAlarmActivity" />
+        <activity android:name=".AlarmRingActivity" />
 
 
     </application>

@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="#1E1E1E"
+    android:layout_marginBottom="8dp">
+
+    <TextView
+        android:id="@+id/playlistName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre de la playlist"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/playlistId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID de la playlist"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/songs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Canciones"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp" />
+</LinearLayout>

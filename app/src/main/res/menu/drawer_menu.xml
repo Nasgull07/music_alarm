@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_authorize"
+        android:title="Autorizar con Spotify"
+        android:icon="@android:drawable/ic_media_play" />
+    <item
+        android:id="@+id/nav_check_devices"
+        android:title="Verificar dispositivos"
+        android:icon="@android:drawable/ic_menu_manage" />
+</menu>
